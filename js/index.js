@@ -22,15 +22,22 @@ function calculateAll() {
   // ITERATION 2
   let total = 0;
   const allProducts = document.querySelectorAll('.product').forEach((product) => updateSubtotal(product));
+  
   /*for (index = 0; index > allProducts.length; i++) {
     updateSubtotal(allProducts)
     total.push(allProducts[i])
     return total
     */
+  const allSubtotals = document.querySelectorAll('.subtotal span')
+  const sum = allSubtotals.forEach((a,b) => Number(a.innerText) + Number(b.innerText), 0)
+  total = document.querySelector('.#total-value span')
+  total.innerText = sum
+  return sum
+  
   }
 
   // ITERATION 3
-  //... your code goes here
+  
 
 
 // ITERATION 4
